@@ -1,0 +1,32 @@
+((("Opponent" .
+   [1 0 0 0 0 0 0 0])
+  ("ourTeamId" .
+   [0 0 0 0 1 0 0 0 1])
+  ("PostChosenMove" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("json_body" .
+   [1 0 0 0 0 0 0 0 1])
+  ("get_bridge_if" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("set_bridge_if" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("vm_builder" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("launcher" .
+   [1 0 0 0 0 0 0 0])
+  ("get_ip_provider" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("ip_provider" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("bridge" .
+   [0 0 0 0 0 1])
+  ("bridge_if" .
+   [5 0 0 0 0 0 0 0 1])
+  ("parser_vm_create" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("parser_kernel_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("add_argumen" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("parser_vm_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])))
