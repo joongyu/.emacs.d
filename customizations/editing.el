@@ -55,12 +55,17 @@
 (global-rainbow-delimiters-mode t)
 
 ;; use 2 spaces for tabs
-(defun die-tabs ()
-  (interactive)
-  (set-variable 'tab-width 2)
-  (mark-whole-buffer)
-  (untabify (region-beginning) (region-end))
-  (keyboard-quit))
+;; (defun die-tabs ()
+;;   (interactive)
+;;   (set-variable 'tab-width 2)
+;;   (mark-whole-buffer)
+;;   (untabify (region-beginning) (region-end))
+;;   (keyboard-quit))
+(setq-default 
+  indent-tabs-mode nil
+)
+
+
 
 ;; fix weird os x kill error
 (defun ns-get-pasteboard ()
@@ -71,3 +76,5 @@
 
 (setq electric-indent-mode nil)
 (setenv "XMODIFIERS" "")
+(global-set-key (kbd "M-p") 'scroll-down-line)
+(global-set-key (kbd "M-n") 'scroll-up-line)
