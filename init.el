@@ -131,11 +131,13 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-go.el")
+(load "setup-deft.el")
+(load "setup-org.el")
 
 (require 'auto-complete-config)
 (ac-config-default)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
-(setq org-agenda-files (list "~/org/work.org"))
 (set-default-font "hack 12")
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
