@@ -1,32 +1,248 @@
-((("Opponent" .
+((("deft-buffer-setup" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("window-width" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("deft-window-width" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("hodoo_config" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("config" .
+   [1 0 0 0 0 0])
+  ("wombat" .
+   [1 0 0 0 0 0])
+  ("StringVar" .
+   [1 0 0 0 0 0 0 0 0])
+  ("mount_path" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("uuid" .
+   [1 0 0 0])
+  ("destroy_instance" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("URL_VM_UUID_FULL" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("full_uuid" .
+   [0 0 0 0 0 0 0 0 1])
+  ("jsonify" .
+   [1 0 0 0 0 0 0])
+  ("req_uuid" .
    [1 0 0 0 0 0 0 0])
-  ("ourTeamId" .
-   [0 0 0 0 1 0 0 0 1])
-  ("PostChosenMove" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_uuid_full" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("LookupError" .
+   [0 0 0 0 0 0 1 0 0 0 0])
   ("json_body" .
-   [1 0 0 0 0 0 0 0 1])
-  ("get_bridge_if" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("set_bridge_if" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("vm_builder" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("launcher" .
-   [1 0 0 0 0 0 0 0])
-  ("get_ip_provider" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("ip_provider" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("bridge" .
-   [0 0 0 0 0 1])
-  ("bridge_if" .
-   [5 0 0 0 0 0 0 0 1])
-  ("parser_vm_create" .
-   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("parser_kernel_list" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+   [1 0 0 0 0 0 0 0 0])
+  ("api_vm_uuid_full" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("parser_vm_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("add_argumen" .
    [0 0 0 0 0 0 0 0 0 0 1])
-  ("parser_vm_list" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])))
+  ("parser_kernel_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("parser_vm_create" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("bridge_if" .
+   [7 0 0 0 0 0 0 0 1])
+  ("bridge" .
+   [0 0 0 0 0 1])
+  ("ip_provider" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("get_ip_provider" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("launcher" .
+   [1 0 0 0 0 0 0 0])
+  ("vm_builder" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("set_bridge_if" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_bridge_if" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("q" .
+   [2])
+  ("instance_repo" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("lookup" .
+   [3 0 0 0 0 0])
+  ("append" .
+   [1 0 0 0 0 0])
+  ("instance" .
+   [12 0 0 0 0 0 0 0])
+  ("hodoo" .
+   [3 0 0 0 0])
+  ("lookup_by_uuid" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("i" .
+   [3])
+  ("lookup_hodoo_by_uuid" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("destroy" .
+   [2 0 0 0 0 0 0])
+  ("new_vm" .
+   [2 0 0 0 0 0])
+  ("common" .
+   [1 0 0 0 0 0])
+  ("parameters" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("params" .
+   [9 0 0 0 0 0])
+  ("body" .
+   [1 0 0 0])
+  ("ip" .
+   [1 0])
+  ("IPProvider" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("repo_manager" .
+   [6 0 0 0 0 0 0 1 0 0 0 0])
+  ("hodoo_manager" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("create_kernel" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("kernel_ver" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("tag" .
+   [3 0 0])
+  ("kernel_repo" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("kernel_list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("hodood" .
+   [1 0 0 0 0 0])
+  ("re" .
+   [1 0])
+  ("repo" .
+   [1 0 0 0])
+  ("RepositoryManager" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("file" .
+   [1 0 0 0])
+  ("err" .
+   [3 0 0])
+  ("PathError" .
+   [0 0 0 0 0 1 0 0 0])
+  ("Err" .
+   [1 0 0])
+  ("syscall" .
+   [1 0 0 0 0 0 0])
+  ("predefine_env_list" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("go-eldoc-setup" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("s" .
+   [1])
+  ("sigChannel" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("sig" .
+   [4 0 0])
+  ("exitChan" .
+   [1 0 0 0 0 0 0 0])
+  ("Println" .
+   [2 0 0 0 0 0 0])
+  ("_" .
+   [5])
+  ("Getenv" .
+   [3 0 0 0 0 0])
+  ("nVols" .
+   [1 0 0 0 0])
+  ("prepareExternalStorage" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("instanceType" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_HODOO_STORAGE_DEV" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pid" .
+   [1 0 0])
+  ("Sleep" .
+   [1 0 0 0 0])
+  ("Second" .
+   [0 0 1 0 0 0])
+  ("hodooDeviceIdentifier" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("createHostsFile" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("testhost" .
+   [1 0 0 0 0 0 0 0])
+  ("Printf" .
+   [3 0 0 0 0 0])
+  ("kv" .
+   [2 0])
+  ("keys" .
+   [1 0 0 0])
+  ("key" .
+   [1 0 0])
+  ("value" .
+   [1 0 0 0 0])
+  ("setState" .
+   [1 0 0 0 0 0 0 0])
+  ("STATE_RUNNING" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("d" .
+   [2])
+  ("onPreStop" .
+   [1 0 0 0 0 0 0 0 0])
+  ("MaxTry" .
+   [1 0 0 0 0 0])
+  ("Timeout" .
+   [1 0 0 0 0 0 0])
+  ("Interval" .
+   [1 0 0 0 0 0 0 0])
+  ("DEFAULT_MAX_RETRY" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_TIMEOUT" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_HEALTH_" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("false" .
+   [7 0 0 0 0])
+  ("DEFAULT_EVENT_EXIT_ON_FAILED" .
+   [1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("se" .
+   [1 0])
+  ("StateEvent" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("Block" .
+   [1 0 0 0 0])
+  ("Time_out" .
+   [2 0 0 0 0 0 0 0])
+  ("ExitOnFailed" .
+   [0 0 1 0 0 0 1 0 0 0 0 0])
+  ("ReloadEnv" .
+   [1 0 0 0 0 0 1 0 0])
+  ("true" .
+   [2 0 0 0])
+  ("DEFAULT_EVENT_BLOCK" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_EVENT_TIMEOUT" .
+   [0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_EVENT_RELOAD_ENV" .
+   [0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_HEALTH_MAX_RETRY" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_HEALTH_TIMEOUT" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_HEALTH_INTERVAL" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("none" .
+   [1 0 0 0])
+  ("nil" .
+   [2 0 0])
+  ("discoveryManager" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("CustomEvent" .
+   [5 0 0 0 0 0 0 0 0 0 0])
+  ("registerCustomEventHandler" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("preCustomEvent" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("postCustomEvent" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("eventName" .
+   [1 0 0 0 0 0 0 0 0])
+  ("ce" .
+   [1 0])
+  ("RestartWhenFinished" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DEFAULT_EVENT_RESTART_WHEN_FINISHED" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))

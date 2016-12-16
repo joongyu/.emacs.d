@@ -1,3 +1,5 @@
+;;; package --- setup script for golang
+;;
 ;; (defun set-exec-path-from-shell-PATH ()
 ;;   (let ((path-from-shell (replace-regexp-in-string
 ;;                           "[ \t\n]*$"
@@ -14,7 +16,7 @@
 (add-to-list 'exec-path "/home/joongyu/workspace/gocode/bin")
 
 (defun my-go-mode-hook ()
-  (setq gofmt-command "goimports")
+  ;; (setq gofmt-command "goimports")
   (go-eldoc-setup)
   ; Call Gofmt before saving
   (add-hook 'before-save-hook 'gofmt-before-save)
@@ -26,7 +28,11 @@
   (define-key (current-local-map) "\C-c\C-c" 'compile)
   ; Godef jump key binding
   (local-set-key (kbd "M-]") 'godef-jump)
-  (local-set-key (kbd "M-[") 'pop-tag-mark))
+  (local-set-key (kbd "M-[") 'pop-tag-mark)
+  (local-set-key (kbd "C-c [") 'go-oracle-callers)
+  (local-set-key (kbd "C-c ]") 'go-oracle-callees)
+  (local-set-key (kbd "C-c r") 'go-oracle-referrers)
+  )
 
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
@@ -35,8 +41,11 @@
 
 (load-file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
 
-(load-file "$GOPATH/src/github.com/dougm/goflymake/go-flymake.el")
-(load-file "$GOPATH/src/github.com/dougm/goflymake/go-flycheck.el")
+;; (load-file "$GOPATH/src/github.com/dougm/goflymake/go-flymake.el")
+;; (load-file "$GOPATH/src/github.com/dougm/goflymake/go-flycheck.el")
+(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/golang/lint/misc/emacs"))
+;; (require 'go-flycheck)
+(require 'golint)
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 

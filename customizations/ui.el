@@ -6,30 +6,58 @@
 
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; Show line numbers
-(global-linum-mode)
+(global-linum-mode -1)
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
 ;; (when (fboundp 'tool-bar-mode)
-;;   (tool-bar-mode -1))
+;;  (tool-bar-mode -1))
 
 ;; Don't show native OS scroll bars for buffers because they're redundant
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
+
+;; compact mode line
+(use-package smart-mode-line)
 
 ;; Color Themes
 ;; Read http://batsov.com/articles/2012/02/19/color-theming-in-emacs-reloaded/
 ;; for a great explanation of emacs color themes.
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
 ;; for a more technical explanation.
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'tomorrow-night-bright t)
+(load-theme 'wombat t)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 140)
+
+(cond ((eq window-system 'x)
+       (set-default-font (font-spec :family "Hack" :size 12 :weight 'light))
+       (set-fontset-font "fontset-default" 'hangul
+                    (font-spec :family "D2Coding" :size 15))
+       ;; (set-default-font "D2Coding")
+       ;; (setq default-frame-alist '((font . "D2Coding"))) ;;; set default font for emacs --daemon / emacsclient
+       ;; (set-face-font 'default "D2Coding-11")
+       ;; (set-fontset-font "fontset-default" '(#x1100 . #xffdc)
+       ;;               '("NanumGothicCoding" . "unicode-bmp"))
+       ;; (set-fontset-font "fontset-default" '(#x1100 . #xffdc)
+       ;;                   '("NanumGothicCoding" . "unicode-bmp"))
+       ;; (setq face-font-rescale-alist
+       ;;                  '(("NanumGothicCoding" . 1.4) ))
+       (setq face-font-rescale-alist
+                        '(("D2Coding" . 1.35) ))       
+       )
+      ((eq window-system 'w32)
+       (set-fontset-font "fontset-default"
+                 '(#x1100 . #xffdc)
+                 '("malgun gothic" . "unicode-bmp"))
+       (set-fontset-font "fontset-default"
+                 '(#xe0bc . #xf66e)
+                 '("malgun gothic" . "unicode-bmp"))))
+(set-face-attribute 'default nil :height 130)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -67,3 +95,7 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+(setq column-number-mode t)
+ ;; (require 'whitespace)
+ ;; (setq whitespace-style '(face empty tabs lines-tail trailing))
+ ;; (global-whitespace-mode t)

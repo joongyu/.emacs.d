@@ -5,11 +5,13 @@
 ;; Define package repositories
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -65,6 +67,54 @@
     ;; edit html tags like sexps
     tagedit
 
+    ;; use-package
+    use-package
+
+    ;; neotree file explorer
+    neotree
+
+    ;; helm
+    helm
+
+    ;; helm projectile
+    helm-projectile
+
+    ;; helm cscope
+    helm-cscope
+
+    ;; deft
+    deft
+
+    ;; go-mode
+    go-mode
+
+    ;; go-autocomplete
+    go-autocomplete
+
+    ;; flycheck
+    flycheck
+
+    ;; multiple cursors
+    multiple-cursors
+
+    ;; htmlize
+    htmlize
+
+    ;; winner mode
+    winner
+
+    ;; describe keyboard shortcut
+    helm-descbinds
+
+    ;; fast way to find something in buffers
+    helm-swoop
+
+    ;; visualize undos and branches
+    undo-tree
+
+    ;; guide keyboard shortcut
+    guide-key
+
     ;; git integration
     magit))
 
@@ -72,6 +122,7 @@
 ;; interface will have a different environment than a shell in a
 ;; terminal window, because OS X does not run a shell during the
 ;; login. Obviously this will lead to unexpected results when
+
 ;; calling external utilities like make from Emacs.
 ;; This library works around this problem by copying important
 ;; environment variables from the user's shell.
@@ -133,11 +184,61 @@
 (load "setup-go.el")
 (load "setup-deft.el")
 (load "setup-org.el")
+(load "setup-c.el")
+
+
+;; use flycheck mode globally
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode))
 
 (require 'auto-complete-config)
 (ac-config-default)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
-(set-default-font "hack 12")
+;; (set-default-font "hack 12")
+;; (setq default-frame-alist '((font . "hack 12"))) ;;; set default font for emacs --daemon / emacsclient
+;; (set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode t)
+ '(coffee-tab-width 2)
+ '(cua-enable-cua-keys nil)
+ '(cua-mode t nil (cua-base))
+ '(custom-safe-themes
+   (quote
+    ("9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" "5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" "1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" "7f1263c969f04a8e58f9441f4ba4d7fb1302243355cb9faecb55aec878a06ee9" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default)))
+ '(even-window-sizes t)
+ '(frame-background-mode (quote dark))
+ '(line-number-mode nil)
+ '(org-agenda-files
+   (quote
+    ("~/.deft/ceres_opensource.txt" "~/.deft/docker_image_sharing.txt" "~/.deft/dc_profiler.txt" "~/personal/organizer.org" "~/watcher.org" "~/todo.org" "/home/joongyu/.deft/tasks.org")))
+ '(org-todo-keywords (quote ((sequence "TODO(t)" "DONE(d)"))))
+ '(package-selected-packages
+   (quote
+    (markdown-mode golint el-get go-eldoc use-package undo-tree tagedit smex rainbow-delimiters paredit neotree multiple-cursors magit imenu-anywhere ido-ubiquitous htmlize helm-swoop helm-projectile helm-descbinds helm-cscope guide-key go-mode go-autocomplete flycheck escreen deft clojure-mode-extra-font-locking cider)))
+ '(solarized-contrast (quote normal))
+ '(solarized-termcolors 256)
+ '(switch-to-buffer-in-dedicated-window (quote prompt)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(load-theme 'solarized t)
+
+;; (find-file "~/todo.org")
+(org-agenda nil "a")
+
+;; set a location for backup files
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 

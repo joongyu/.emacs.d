@@ -16,7 +16,7 @@
 (show-paren-mode 1)
 
 ;; Highlight current line
-(global-hl-line-mode 1)
+(global-hl-line-mode 0)
 
 ;; Interactive search key bindings. By default, C-s runs
 ;; isearch-forward, so this swaps the bindings.
@@ -52,7 +52,7 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 ;; yay rainbows!
-(global-rainbow-delimiters-mode t)
+;; (global-rainbow-delimiters-mode t)      
 
 ;; use 2 spaces for tabs
 ;; (defun die-tabs ()
@@ -88,4 +88,17 @@
     (newline-and-indent)))
 
 (global-set-key (kbd "<C-return>") 'newline-without-break-of-line)
+(global-visual-line-mode)
+
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+(global-set-key (kbd "C-<return>") 'cua-rectangle-mark-mode)
+;;Project Explorer
+;;(require 'project-explorer)
+;;(global-set-key (kbd "M-e") 'project-explorer-toggle)
 
