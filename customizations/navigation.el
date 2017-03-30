@@ -50,6 +50,7 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 
+
 ;; Enhances M-x to allow easier execution of commands. Provides
 ;; a filterable list of possible commands in the minibuffer
 ;; http://www.emacswiki.org/emacs/Smex
@@ -88,8 +89,13 @@
 
 ;; winner mode allow to undo and redo with respective to C-c <left> and C-c <right>
 (use-package winner
-  :defer t)
-
+  :init
+  :bind (("C-c o v" . delete-other-windows-vertically)
+         ("C-c o a" . delete-other-windows)
+         ("C-c o n" . winner-redo)
+         ("C-c o p" . winner-undo)))
+(winner-mode 1)
+(global-linum-mode 1)
 ;; if you wan to use flx-ido as a projectile-completion-system, uncomment it
 ;; (require 'flx-ido)
 ;; (ido-mode 1)
@@ -265,3 +271,4 @@ point reaches the beginning or end of the buffer, stop there."
      (define-key helm-cscope-mode-map (kbd "C-c s C") 'helm-cscope-find-called-function)
      (define-key helm-cscope-mode-map (kbd "C-c s c") 'helm-cscope-find-calling-this-funtcion)
      (define-key helm-cscope-mode-map (kbd "M-s") 'helm-cscope-select)))
+

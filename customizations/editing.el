@@ -97,7 +97,7 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
-(global-set-key (kbd "C-<return>") 'cua-rectangle-mark-mode)
+(global-set-key (kbd "C-M-<return>") 'cua-rectangle-mark-mode)
 ;;Project Explorer
 ;;(require 'project-explorer)
 ;;(global-set-key (kbd "M-e") 'project-explorer-toggle)
